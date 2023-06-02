@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a56bdae329.js" crossorigin="anonymous"></script>
+    <title>Simple Form Stepper</title>
+</head>
+
+<body>
+    <div id="menu">
+        <a href="#"><button>About</button></a>
+        <a href="#"><button>Servies</button></a>
+    </div>
+    <div class="form-container">
+        <h1 class="aceplora" >Programming Internship Review Form</h1>
+
+        <form action="#" class="forms">
+            <div class="stepper">
+                <div class="steps step-active" id="toggle1" style="color: white;">1</div>
+                <div class="steps" id="toggle2">2</div>
+                <div class="steps" id="toggle3">3</div>
+                <div class="line"></div>
+            </div>
+            <div class="helper-text" id="filltext">Please ensure you fill the form correctly</div>
+
+            <div class="pages active-page" id="form1">
+                <!-- name, email address,  location -->
+                <label>Name</label>
+                <input type="text"  name="full-name" id="name" placeholder="Joy Praise" required max="50"/>
+                
+                <br />
+                <label>Email</label>
+                <input type="email" name="full-name" id="email" required placeholder="example@aceplora.com" />
+                
+                <br />
+                <label>Location</label>
+                <input type="text" name="full-name" id="location" required placeholder="Ondo, Nigeria"/>
+                <br />
+               
+            </div>
+
+            <div class="pages" id="form2">
+                <!-- course, ,  location -->
+                <label>Phone Number</label>
+                <input type="tel" name="phone-number" id="phonenumber" placeholder="0812 XXX XXXX" maxlength="11" minlength="11"/>
+                
+                <br />
+                <select id="enrolled-course">
+                    <option value="example" selected="selected">Please select an option</option>
+                    <option value="ui-ux">User interface / User Experience</option>
+                    <option value="web-dev">Web Development</option>
+                    <option value="android">Android App Development</option>
+                    <option value="product-design">Product Design</option>
+                </select>
+                <br />
+
+                <select id="gender" >
+                    <option value="example" selected="selected">Please select a gender</option>
+                    <option value="male">Male</option>
+                    <option value="male">Female</option>
+                    <option value="binary">Binary</option>
+                    <option value="Gay">Gay</option>
+                    <option value="Les">Lesbian</option>
+                </select>
+
+                <br />
+            </div>
+
+            <div class="pages" id="form3">
+                <!-- name, email address,  location -->
+
+                <textarea name="reviews" id="comments" cols="30" rows="10" placeholder="Leave us a Comment Here"></textarea>
+                <div class="rating-text"><h5>How was your Experience? </h5></div>
+                <div class="rating">
+                    
+                    <i class="fa fa-star checked" aria-hidden="true" ></i>
+                    <i class="fa fa-star " aria-hidden="true" ></i>
+                    <i class="fa fa-star " aria-hidden="true"></i>
+                    <i class="fa fa-star " aria-hidden="true"></i>
+                    <i class="fa fa-star " aria-hidden="true"></i>
+                </div>
+                <br />
+            </div>
+
+
+            <div class="pages">
+                Thanks You for a Succesfully submitting
+            </div>
+            <div class="btn-container">
+               <div class="btn-space" id="previous"><button class="prev"  type="button" onclick="removeSubmitButton()">Prev</button></div>
+               <div class="btn-space" id="btncontainer"><button class="next" id="next" type="button" onclick="addSubmitButton()">Next</button></div>
+               <div id="submitBTN"></div>
+            </div>
+        </form>
+
+
+        
+    </div>
+    <div id="result"></div>
+</body>
+<script src="app.js"></script>
+
+</html>
